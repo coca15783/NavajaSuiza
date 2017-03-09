@@ -21,25 +21,43 @@ namespace NavajaSuiza
         {
 
         }
-
+        /// <summary>
+        /// Boton que llama a la aplicación 2
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             Aplicación_2.Form1 oFormulario = new Aplicación_2.Form1();
             oFormulario.ShowDialog();
         }
 
+        /// <summary>
+        /// Boton que llama a la aplicación 1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Aplicación_1.Form1 oFormulario = new Aplicación_1.Form1();
             oFormulario.ShowDialog();
         }
 
+        /// <summary>
+        /// Boton que llama a la aplicación 3
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             Aplicación_3.Form1 oFormulario = new Aplicación_3.Form1();
             oFormulario.ShowDialog();
         }
-
+        /// <summary>
+        /// Boton que llama a la aplicación 4
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
             Aplicación_4.Form1 oFormulario = new Aplicación_4.Form1();

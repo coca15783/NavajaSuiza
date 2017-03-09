@@ -8,30 +8,75 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Namespace aplicación 3
+
 namespace NavajaSuiza.Aplicación_3
 {
+    /// <summary>
+    /// Clase principal de la aplicación.
+    /// </summary>
+    /// <remarks>
+    /// Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
+    /// </remarks>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// Constructor de la clase Form1.
+        /// </summary>
+        
         public Form1()
         {
             InitializeComponent();
         }
 
+        ///<summary>
+        ///Funcion que calcula la potencia de un número.
+        ///</summary>
+        ///<return>
+        ///Devuelve un número que corresponde con el resultado.
+        ///</return>
+        ///<param name="num">
+        ///Ruta del número a leer.
+        ///</param>
+        ///<param name="exp">
+        ///Ruta del exponente a leer.
+        ///</param>
+        
+        int potencia(int num,int exp)
+        {
+            int pot;
+            int i;
+
+            pot = 1;
+
+            for (i = 1; i <= exp; i++)
+            {
+                pot = pot * num;
+            }
+            return pot;
+        }
+
+        /// <summary>
+        /// Boton que ejecuta la función potencia y muestra su resultado.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
         private void button1_Click(object sender, EventArgs e)
         {
             int num;
-            int pot;
-            int i;
             int exp;
-            
+            int resultado;
+         
             num = int.Parse(textBox1.Text);
             exp = int.Parse(textBox2.Text);
-            pot = 1;
-            for (i = 1;  i<=exp ; i++)
-            {
-                pot = pot * num ;
-            }
-            MessageBox.Show(pot.ToString());
+            resultado = potencia(num, exp);
+
+            
+            MessageBox.Show(resultado.ToString());
 
         }
     }
