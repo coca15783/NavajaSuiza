@@ -49,7 +49,7 @@ namespace NavajaSuiza.Aplicación_3
         {
             int pot;
 
-            pot = 0;
+            pot = 1;
 
             if (exp >= 0)
             {

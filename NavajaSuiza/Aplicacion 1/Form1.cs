@@ -113,9 +113,28 @@ namespace NavajaSuiza.Aplicación_1
         private void button1_Click(object sender, EventArgs e)
         {
             int din;
-            din = int.Parse(textBox1.Text);
 
-            cantbilletes(din);
+            // Prueba Caja Blanca
+
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Introduce un número de pesetas en metalico");
+            }
+            else
+            {
+                try
+                {
+                    din = int.Parse(textBox1.Text);
+                    cantbilletes(din);
+                }
+                catch
+                {
+                    MessageBox.Show("Has instroducido un carácter");
+                }
+            }
+            
+
+            
         }
     }
 }
