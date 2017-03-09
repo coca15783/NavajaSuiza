@@ -41,14 +41,14 @@ namespace NavajaSuiza.Aplicación_2
         ///<param name="num">
         ///Ruta del número a leer.
         ///</param>
-        
+
         int factorial(int num)
         {
             int fac = 1;
-
+           
             for (int i = num; i > 0; i--)
             {
-                fac = fac * i;
+               fac = fac * i;
             }
 
             return fac;
@@ -64,12 +64,35 @@ namespace NavajaSuiza.Aplicación_2
 
             int num;
             int fact;
+
+            //Prueba Caja Blanca
+
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Introduce un número");
+            }
+            else
+            {
+                try
+                {
+                    
+                    num = int.Parse(textBox1.Text);
+                    fact = factorial(num);
+                    if (num > 0)
+                    {
+                        MessageBox.Show(fact.ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Introduce un número positivo");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Has instroducido un carácter");
+                }
+            }
             
-            num = int.Parse(textBox1.Text);
-            fact = factorial(num);
-
-            MessageBox.Show(fact.ToString());
-
 
         }
     }

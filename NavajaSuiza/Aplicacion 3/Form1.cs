@@ -48,14 +48,25 @@ namespace NavajaSuiza.Aplicación_3
         int potencia(int num,int exp)
         {
             int pot;
-            int i;
 
-            pot = 1;
+            pot = 0;
 
-            for (i = 1; i <= exp; i++)
+            if (exp >= 0)
             {
-                pot = pot * num;
+                for (int i = 1; i <= exp; i++)
+                {
+
+                    pot = pot + num;
+                }
             }
+            else
+            {
+                for (int i = -1; i >= exp; i--)
+                {
+                    pot = pot - num;
+                }
+            }
+
             return pot;
         }
 
