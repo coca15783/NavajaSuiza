@@ -57,55 +57,55 @@ namespace NavajaSuiza.Aplicación_1
         ///         </item>
         ///        </list>
         /// </para>
-        ///<param name="din">
+        ///<param name="Din">
         ///Ruta del dinero a leer.
         ///</param>
 
-        void cantbilletes(int din)
+        void cantbilletes (int Din)
         {
-            int billete;
+            int Billete;
 
-            billete = din / 10000;
-            din = din % 10000;
-            label2.Text = billete.ToString() + " " + "de 10000";
+            Billete = Din / 10000;
+            Din = Din % 10000;
+            label2.Text = Billete.ToString() + " " + "de 10000";
 
-            if (billete == 0)
+            if (Billete == 0)
             {
                 label2.Text = "";
             }
 
-            billete = din / 5000;
-            din = din % 5000;
-            label3.Text = billete.ToString() + " " + "de 5000";
+            Billete = Din / 5000;
+            Din = Din % 5000;
+            label3.Text = Billete.ToString() + " " + "de 5000";
 
-            if (billete == 0)
+            if (Billete == 0)
             {
                 label3.Text = "";
             }
 
-            billete = din / 2000;
-            din = din % 2000;
-            label4.Text = billete.ToString() + " " + "de 2000";
+            Billete = Din / 2000;
+            Din = Din % 2000;
+            label4.Text = Billete.ToString() + " " + "de 2000";
 
-            if (billete == 0)
+            if (Billete == 0)
             {
                 label4.Text = "";
             }
 
-            billete = din / 100;
-            din = din % 100;
-            label5.Text = billete.ToString() + " " + "de 100";
+            Billete = Din / 100;
+            Din = Din % 100;
+            label5.Text = Billete.ToString() + " " + "de 100";
 
-            if (billete == 0)
+            if (Billete == 0)
             {
                 label5.Text = "";
             }
 
-            billete = din / 25;
-            din = din % 25;
-            label6.Text = billete.ToString() + " " + "de 25";
+            Billete = Din / 25;
+            Din = Din % 25;
+            label6.Text = Billete.ToString() + " " + "de 25";
 
-            if (billete == 0)
+            if (Billete == 0)
             {
                 label6.Text = "";
             }
@@ -117,7 +117,7 @@ namespace NavajaSuiza.Aplicación_1
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            int din;
+            int Din;
 
             // Prueba Caja Blanca
 
@@ -129,8 +129,8 @@ namespace NavajaSuiza.Aplicación_1
             {
                 try
                 {
-                    din = int.Parse(textBox1.Text);
-                    cantbilletes(din);
+                    Din = int.Parse(textBox1.Text);
+                    cantbilletes(Din);
                 }
                 catch
                 {
