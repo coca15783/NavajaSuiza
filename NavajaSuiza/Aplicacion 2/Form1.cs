@@ -44,7 +44,9 @@ namespace NavajaSuiza.Aplicación_2
 
         int factorial(int num)
         {
-            int fac = 1;
+            int fac;
+
+            fac = 1;
            
             for (int i = num; i > 0; i--)
             {
@@ -62,8 +64,7 @@ namespace NavajaSuiza.Aplicación_2
         private void button1_Click(object sender, EventArgs e)
         {
 
-            int num;
-            int fact;
+            int num,fact;
 
             //Prueba Caja Blanca
 
@@ -78,7 +79,8 @@ namespace NavajaSuiza.Aplicación_2
                     
                     num = int.Parse(textBox1.Text);
                     fact = factorial(num);
-                    if (num > 0)
+
+                    if (num >= 0)
                     {
                         MessageBox.Show(fact.ToString());
                     }

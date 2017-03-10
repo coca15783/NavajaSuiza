@@ -68,6 +68,7 @@ namespace NavajaSuiza.Aplicación_1
             billete = din / 10000;
             din = din % 10000;
             label2.Text = billete.ToString() + " " + "de 10000";
+
             if (billete == 0)
             {
                 label2.Text = "";
@@ -76,6 +77,7 @@ namespace NavajaSuiza.Aplicación_1
             billete = din / 5000;
             din = din % 5000;
             label3.Text = billete.ToString() + " " + "de 5000";
+
             if (billete == 0)
             {
                 label3.Text = "";
@@ -84,6 +86,7 @@ namespace NavajaSuiza.Aplicación_1
             billete = din / 2000;
             din = din % 2000;
             label4.Text = billete.ToString() + " " + "de 2000";
+
             if (billete == 0)
             {
                 label4.Text = "";
@@ -92,6 +95,7 @@ namespace NavajaSuiza.Aplicación_1
             billete = din / 100;
             din = din % 100;
             label5.Text = billete.ToString() + " " + "de 100";
+
             if (billete == 0)
             {
                 label5.Text = "";
@@ -100,6 +104,7 @@ namespace NavajaSuiza.Aplicación_1
             billete = din / 25;
             din = din % 25;
             label6.Text = billete.ToString() + " " + "de 25";
+
             if (billete == 0)
             {
                 label6.Text = "";

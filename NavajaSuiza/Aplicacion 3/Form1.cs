@@ -47,13 +47,13 @@ namespace NavajaSuiza.Aplicación_3
         
         int potencia(int num,int exp)
         {
-            int pot;
+            int pot,i;
 
-            pot = 1;
+            pot = 0;
 
             if (exp >= 0)
             {
-                for (int i = 1; i <= exp; i++)
+                for (i = 1; i <= exp; i++)
                 {
 
                     pot = pot + num;
@@ -61,7 +61,7 @@ namespace NavajaSuiza.Aplicación_3
             }
             else
             {
-                for (int i = -1; i >= exp; i--)
+                for (i = -1; i >= exp; i--)
                 {
                     pot = pot - num;
                 }
@@ -78,12 +78,11 @@ namespace NavajaSuiza.Aplicación_3
         
         private void button1_Click(object sender, EventArgs e)
         {
-            int num;
-            int exp;
-            int resultado;
-         
+            int num,exp,resultado;
+            
             num = int.Parse(textBox1.Text);
             exp = int.Parse(textBox2.Text);
+
             resultado = potencia(num, exp);
 
             

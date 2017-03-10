@@ -45,8 +45,7 @@ namespace NavajaSuiza.Aplicación_4
         string tabla(int num)
         {
             string texto;
-            int i;
-            int tabla;
+            int i,tabla;
 
             texto = "Tabla del" + " " + num + ":" + "\n";
             tabla = 0;
