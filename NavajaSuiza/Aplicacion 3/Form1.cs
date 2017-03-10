@@ -38,37 +38,37 @@ namespace NavajaSuiza.Aplicación_3
         ///<return>
         ///Devuelve un número que corresponde con el resultado.
         ///</return>
-        ///<param name="Num">
+        ///<param name="num">
         ///Ruta del número a leer.
         ///</param>
-        ///<param name="Exp">
+        ///<param name="exp">
         ///Ruta del exponente a leer.
         ///</param>
         
-        int potencia (int Num, int Exp)
+        int Potencia (int num, int exp)
         {
-            int Pot;
-            int I;
+            int pot;
+            int i;
 
-            Pot = 0;
+            pot = 0;
 
-            if (Exp >= 0)
+            if (exp >= 0)
             {
-                for (I = 1; I <= Exp; I++)
+                for (i = 1; i <= exp; i++)
                 {
 
-                    Pot = Pot + Num;
+                    pot = pot + num;
                 }
             }
             else
             {
-                for (I = -1; I >= Exp; I--)
+                for (i = -1; i >= exp; i--)
                 {
-                    Pot = Pot - Num;
+                    pot = pot - num;
                 }
             }
 
-            return Pot;
+            return pot;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace NavajaSuiza.Aplicación_3
             Num = int.Parse(textBox1.Text);
             Exp = int.Parse(textBox2.Text);
 
-            Resultado = potencia(Num, Exp);
+            Resultado = Potencia(Num, Exp);
 
             
             MessageBox.Show(Resultado.ToString());

@@ -38,25 +38,25 @@ namespace NavajaSuiza.Aplicación_4
         ///<return>
         ///Devuelve un texto que corresponde con el resultado.
         ///</return>
-        ///<param name="Num">
+        ///<param name="num">
         ///Ruta del número a leer.
         ///</param>
         
-        string tabla (int Num)
+        string Tabla (int num)
         {
-            string Texto;
-            int I;
-            int Tabla;
+            string texto;
+            int i;
+            int tabla;
 
-            Texto = "Tabla del" + " " + Num + ":" + "\n";
-            Tabla = 0;
+            texto = "Tabla del" + " " + num + ":" + "\n";
+            tabla = 0;
 
-            for (I = 1; I <= 10; I++)
+            for (i = 1; i <= 10; i++)
             {
-                Tabla = Num * I;
-                Texto = Texto + Num + " " + "*" + " " + I + " " + "=" + " " + Tabla + "\n";
+                tabla = num * i;
+                texto = texto + num + " " + "*" + " " + i + " " + "=" + " " + tabla + "\n";
             }
-                return Texto;
+                return texto;
         }
 
         /// <summary>
@@ -70,16 +70,16 @@ namespace NavajaSuiza.Aplicación_4
         
         private void button1_Click(object sender, EventArgs e)
         {
-            int Num;
-            string Resultado;
+            int num;
+            string resultado;
 
-            Num = int.Parse(textBox1.Text);
-            Resultado = tabla(Num);
+            num = int.Parse(textBox1.Text);
+            resultado = Tabla(num);
 
-            if (Num > 0 && Num <= 100)
+            if (num > 0 && num <= 100)
             {
                 
-                MessageBox.Show(Resultado);
+                MessageBox.Show(resultado);
             }
             else
             {

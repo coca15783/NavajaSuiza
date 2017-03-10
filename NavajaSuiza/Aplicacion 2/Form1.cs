@@ -38,23 +38,23 @@ namespace NavajaSuiza.Aplicación_2
         ///<return>
         ///Devuelve un número que corresponde con el resultado.
         ///</return>
-        ///<param name="Num">
+        ///<param name="num">
         ///Ruta del número a leer.
         ///</param>
 
-        int factorial (int Num)
+        int Factorial (int num)
         {
-            int Fac;
-            int I;
+            int fac;
+            int i;
 
-            Fac = 1;
+            fac = 1;
            
-            for (I = Num; I > 0; I--)
+            for (i = num; i > 0; i--)
             {
-               Fac = Fac * I;
+               fac = fac * i;
             }
 
-            return Fac;
+            return fac;
         }
         /// <summary>
         /// Boton que ejecuta la función factorial y muestra su resultado.
@@ -65,8 +65,8 @@ namespace NavajaSuiza.Aplicación_2
         private void button1_Click(object sender, EventArgs e)
         {
 
-            int Num; 
-            int Fact;
+            int num; 
+            int fact;
 
             //Prueba Caja Blanca
 
@@ -79,12 +79,12 @@ namespace NavajaSuiza.Aplicación_2
                 try
                 {
                     
-                    Num = int.Parse(textBox1.Text);
-                    Fact = factorial(Num);
+                    num = int.Parse(textBox1.Text);
+                    fact = Factorial(num);
 
-                    if (Num >= 0)
+                    if (num >= 0)
                     {
-                        MessageBox.Show(Fact.ToString());
+                        MessageBox.Show(fact.ToString());
                     }
                     else
                     {
