@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NavajaSuiza
 {
-    public partial class Form1 : Form
+    public partial class FormularioPrincipal : Form
     {
-        public Form1()
+        public FormularioPrincipal()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace NavajaSuiza
         /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-            Aplicación_2.Form1 oFormulario = new Aplicación_2.Form1();
+            Aplicación_2.Formulario2 oFormulario = new Aplicación_2.Formulario2();
             oFormulario.ShowDialog();
         }
 
@@ -39,7 +39,7 @@ namespace NavajaSuiza
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            Aplicación_1.Form1 oFormulario = new Aplicación_1.Form1();
+            Aplicación_1.Formulario1 oFormulario = new Aplicación_1.Formulario1();
             oFormulario.ShowDialog();
         }
 
@@ -50,7 +50,7 @@ namespace NavajaSuiza
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            Aplicación_3.Form1 oFormulario = new Aplicación_3.Form1();
+            Aplicación_3.Formulario3 oFormulario = new Aplicación_3.Formulario3();
             oFormulario.ShowDialog();
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace NavajaSuiza
         /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
-            Aplicación_4.Form1 oFormulario = new Aplicación_4.Form1();
+            Aplicación_4.Formulario4 oFormulario = new Aplicación_4.Formulario4();
             oFormulario.ShowDialog();
         }
     }

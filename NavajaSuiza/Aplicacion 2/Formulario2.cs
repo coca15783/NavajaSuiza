@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace NavajaSuiza.Aplicación_2
 {
     /// <summary>
-    /// Clase principal de la aplicación.
+    /// Clase principal de la aplicación 2.
     /// </summary>
     /// <remarks>
     /// Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
@@ -21,13 +21,13 @@ namespace NavajaSuiza.Aplicación_2
     /// <param name="sender"></param>
     /// <param name="e"></param>
     
-    public partial class Form1 : Form
+    public partial class Formulario2 : Form
     {
         /// <summary>
-        /// Constructor de la clase Form1.
+        /// Constructor de la clase Formulario2.
         /// </summary>
         
-        public Form1()
+        public Formulario2()
         {
             InitializeComponent();
         }
@@ -42,7 +42,7 @@ namespace NavajaSuiza.Aplicación_2
         ///Ruta del número a leer.
         ///</param>
 
-        int Factorial (int num)
+        int factorial (int num)
         {
             int fac;
             int i;
@@ -80,7 +80,7 @@ namespace NavajaSuiza.Aplicación_2
                 {
                     
                     num = int.Parse(textBox1.Text);
-                    fact = Factorial(num);
+                    fact = factorial(num);
 
                     if (num >= 0)
                     {
@@ -97,6 +97,34 @@ namespace NavajaSuiza.Aplicación_2
                 }
             }
             
+
+        }
+
+        
+
+        /*
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Formulario2
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "Formulario2";
+            this.Load += new System.EventHandler(this.Formulario2_Load);
+            this.ResumeLayout(false);
+
+        }
+        */
+
+        private void Formulario2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void Formulario2_Load_1(object sender, EventArgs e)
+        {
 
         }
     }

@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace NavajaSuiza.Aplicación_4
 {
     /// <summary>
-    /// Clase principal de la aplicación.
+    /// Clase principal de la aplicación 4.
     /// </summary>
     /// <remarks>
     /// Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
@@ -21,13 +21,13 @@ namespace NavajaSuiza.Aplicación_4
     /// <param name="sender"></param>
     /// <param name="e"></param>
     
-    public partial class Form1 : Form
+    public partial class Formulario4 : Form
     {
         /// <summary>
-        /// Constructor de la clase Form1.
+        /// Constructor de la clase Formulario 4.
         /// </summary>
         
-        public Form1()
+        public Formulario4()
         {
             InitializeComponent();
         }
@@ -42,7 +42,7 @@ namespace NavajaSuiza.Aplicación_4
         ///Ruta del número a leer.
         ///</param>
         
-        string Tabla (int num)
+        string tabla (int num)
         {
             string texto;
             int i;
@@ -74,7 +74,7 @@ namespace NavajaSuiza.Aplicación_4
             string resultado;
 
             num = int.Parse(textBox1.Text);
-            resultado = Tabla(num);
+            resultado = tabla(num);
 
             if (num > 0 && num <= 100)
             {
@@ -86,6 +86,24 @@ namespace NavajaSuiza.Aplicación_4
                 MessageBox.Show("El número no es valido");
             
             }
+        }
+
+        
+
+        
+
+        
+
+        private void Formulario4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void Formulario4_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

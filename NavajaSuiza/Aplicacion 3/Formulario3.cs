@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace NavajaSuiza.Aplicación_3
 {
     /// <summary>
-    /// Clase principal de la aplicación.
+    /// Clase principal de la aplicación 3.
     /// </summary>
     /// <remarks>
     /// Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
@@ -21,13 +21,13 @@ namespace NavajaSuiza.Aplicación_3
     /// <param name="sender"></param>
     /// <param name="e"></param>
     
-    public partial class Form1 : Form
+    public partial class Formulario3 : Form
     {
         /// <summary>
-        /// Constructor de la clase Form1.
+        /// Constructor de la clase Formulario3.
         /// </summary>
         
-        public Form1()
+        public Formulario3()
         {
             InitializeComponent();
         }
@@ -45,7 +45,7 @@ namespace NavajaSuiza.Aplicación_3
         ///Ruta del exponente a leer.
         ///</param>
         
-        int Potencia (int num, int exp)
+        int potencia (int num, int exp)
         {
             int pot;
             int i;
@@ -86,10 +86,24 @@ namespace NavajaSuiza.Aplicación_3
             Num = int.Parse(textBox1.Text);
             Exp = int.Parse(textBox2.Text);
 
-            Resultado = Potencia(Num, Exp);
+            Resultado = potencia(Num, Exp);
 
             
             MessageBox.Show(Resultado.ToString());
+
+        }
+
+       
+
+        private void Formulario3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void Formulario3_Load_1(object sender, EventArgs e)
+        {
 
         }
     }

@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace NavajaSuiza.Aplicación_1
 {
     /// <summary>
-    /// Clase principal de la aplicación.
+    /// Clase principal de la aplicación 1.
     /// </summary>
     /// <remarks>
     /// Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
@@ -21,13 +21,13 @@ namespace NavajaSuiza.Aplicación_1
     /// <param name="sender"></param>
     /// <param name="e"></param>
 
-    public partial class Form1 : Form
+    public partial class Formulario1 : Form
     {
         /// <summary>
-        /// Constructor de la clase Form1.
+        /// Constructor de la clase Formulario1.
         /// </summary>
 
-        public Form1()
+        public Formulario1()
         {
             InitializeComponent();
         }
@@ -61,7 +61,7 @@ namespace NavajaSuiza.Aplicación_1
         ///Ruta del dinero a leer.
         ///</param>
 
-        void CantBilletes (int din)
+        void cantBilletes (int din)
         {
             int billete;
 
@@ -130,7 +130,7 @@ namespace NavajaSuiza.Aplicación_1
                 try
                 {
                     din = int.Parse(textBox1.Text);
-                    CantBilletes(din);
+                    cantBilletes(din);
                 }
                 catch
                 {
@@ -140,6 +140,29 @@ namespace NavajaSuiza.Aplicación_1
             
 
             
+        } 
+
+        private void Formulario1_Load(object sender, EventArgs e)
+        {
+
         }
+
+        
+
+        private void Formulario1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void Formulario1_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+
     }
 }
