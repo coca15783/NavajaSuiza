@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NavajaSuiza.Aplicacion_1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -60,64 +61,14 @@ namespace NavajaSuiza.Aplicación_1
         ///<param name="din">
         ///Ruta del dinero a leer.
         ///</param>
-
-        void cantBilletes (int din)
+        
+        private void mostrarBilletes()
         {
-            int billete;
+            tDinero Dinero = new tDinero();
 
-            billete = din / 10000;
-            din = din % 10000;
-            label2.Text = billete.ToString() + " " + "de 10000";
+            int dinero;
 
-            if (billete == 0)
-            {
-                label2.Text = "";
-            }
-
-            billete = din / 5000;
-            din = din % 5000;
-            label3.Text = billete.ToString() + " " + "de 5000";
-
-            if (billete == 0)
-            {
-                label3.Text = "";
-            }
-
-            billete = din / 2000;
-            din = din % 2000;
-            label4.Text = billete.ToString() + " " + "de 2000";
-
-            if (billete == 0)
-            {
-                label4.Text = "";
-            }
-
-            billete = din / 100;
-            din = din % 100;
-            label5.Text = billete.ToString() + " " + "de 100";
-
-            if (billete == 0)
-            {
-                label5.Text = "";
-            }
-
-            billete = din / 25;
-            din = din % 25;
-            label6.Text = billete.ToString() + " " + "de 25";
-
-            if (billete == 0)
-            {
-                label6.Text = "";
-            }
-        }
-        /// <summary>
-        /// Boton que ejecuta la función cantbilletes
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
-        {
-            int din;
+            dinero = Dinero.Dinero;
 
             // Prueba Caja Blanca
 
@@ -129,40 +80,45 @@ namespace NavajaSuiza.Aplicación_1
             {
                 try
                 {
-                    din = int.Parse(textBox1.Text);
-                    cantBilletes(din);
+                    Dinero.Dinero = int.Parse(textBox1.Text);
+                    MessageBox.Show(Dinero.mostrarDatos());
                 }
                 catch
                 {
                     MessageBox.Show("Has instroducido un carácter");
                 }
             }
-            
+        }
 
-            
-        } 
+        /// <summary>
+        /// Boton que ejecuta la función cantbilletes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            mostrarBilletes();
+              
+        }
 
         private void Formulario1_Load(object sender, EventArgs e)
         {
+            // Lo hago aqui ya que no he podido acceder a las propiedades de los label porque no me aparecen los label en el formulario.
 
+            label2.Text = "";
+            label3.Text = "";
+            label4.Text = "";
+            label5.Text = "";
+            label6.Text = "";
         }
 
-        
+       
 
         private void Formulario1_Load_1(object sender, EventArgs e)
         {
 
         }
-
-        
-
-        private void Formulario1_Load_2(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-
     }
 }

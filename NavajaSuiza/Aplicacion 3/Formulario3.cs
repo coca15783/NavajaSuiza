@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NavajaSuiza.Aplicacion_3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,43 +33,14 @@ namespace NavajaSuiza.Aplicación_3
             InitializeComponent();
         }
 
-        ///<summary>
-        ///Funcion que calcula la potencia de un número.
-        ///</summary>
-        ///<return>
-        ///Devuelve un número que corresponde con el resultado.
-        ///</return>
-        ///<param name="num">
-        ///Ruta del número a leer.
-        ///</param>
-        ///<param name="exp">
-        ///Ruta del exponente a leer.
-        ///</param>
-        
-        int potencia (int num, int exp)
+        private void mostrarPotencia()
         {
-            int pot;
-            int i;
+            tPotencia Potencia = new tPotencia();
+      
+            Potencia.Base = int.Parse(textBox1.Text);
+            Potencia.Exponente = int.Parse(textBox2.Text);
 
-            pot = 0;
-
-            if (exp >= 0)
-            {
-                for (i = 1; i <= exp; i++)
-                {
-
-                    pot = pot + num;
-                }
-            }
-            else
-            {
-                for (i = -1; i >= exp; i--)
-                {
-                    pot = pot - num;
-                }
-            }
-
-            return pot;
+            MessageBox.Show(Potencia.mostrarDatos());
         }
 
         /// <summary>
@@ -79,32 +51,9 @@ namespace NavajaSuiza.Aplicación_3
         
         private void button1_Click(object sender, EventArgs e)
         {
-            int Num;
-            int Exp; 
-            int Resultado;
-            
-            Num = int.Parse(textBox1.Text);
-            Exp = int.Parse(textBox2.Text);
 
-            Resultado = potencia(Num, Exp);
-
-            
-            MessageBox.Show(Resultado.ToString());
-
+            mostrarPotencia();
         }
 
-       
-
-        private void Formulario3_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void Formulario3_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

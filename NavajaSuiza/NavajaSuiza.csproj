@@ -51,18 +51,22 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aplicacion 1\Form1.Designer.cs" />
+    <Compile Include="Aplicacion 1\tBilletes.cs" />
     <Compile Include="Aplicacion 2\Formulario2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aplicacion 2\Form1.Designer.cs" />
+    <Compile Include="Aplicacion 2\tFactorial.cs" />
     <Compile Include="Aplicacion 3\Formulario3.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aplicacion 3\Form1.Designer.cs" />
+    <Compile Include="Aplicacion 3\tPotencia.cs" />
     <Compile Include="Aplicacion 4\Formulario4.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aplicacion 4\Form1.Designer.cs" />
+    <Compile Include="Aplicacion 4\tTabla.cs" />
     <Compile Include="FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +99,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Documentación\Documentation.chm" />
     <None Include="Documentación\NavajaSuiza.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

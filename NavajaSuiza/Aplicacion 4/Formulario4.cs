@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NavajaSuiza.Aplicacion_4;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,31 +33,24 @@ namespace NavajaSuiza.Aplicación_4
             InitializeComponent();
         }
 
-        ///<summary>
-        ///Funcion que calcula la tabla de multiplicar de un número.
-        ///</summary>
-        ///<return>
-        ///Devuelve un texto que corresponde con el resultado.
-        ///</return>
-        ///<param name="num">
-        ///Ruta del número a leer.
-        ///</param>
-        
-        string tabla (int num)
+        private void mostrarTabla()
         {
-            string texto;
-            int i;
-            int tabla;
+            tTabla Tabla = new tTabla();
 
-            texto = "Tabla del" + " " + num + ":" + "\n";
-            tabla = 0;
 
-            for (i = 1; i <= 10; i++)
+            Tabla.Numero = int.Parse(textBox1.Text);
+            
+
+            if (Tabla.Numero > 0 && Tabla.Numero <= 100)
             {
-                tabla = num * i;
-                texto = texto + num + " " + "*" + " " + i + " " + "=" + " " + tabla + "\n";
+
+                MessageBox.Show(Tabla.mostrarDatos());
             }
-                return texto;
+            else
+            {
+                MessageBox.Show("El número no es valido");
+
+            }
         }
 
         /// <summary>
@@ -70,40 +64,8 @@ namespace NavajaSuiza.Aplicación_4
         
         private void button1_Click(object sender, EventArgs e)
         {
-            int num;
-            string resultado;
-
-            num = int.Parse(textBox1.Text);
-            resultado = tabla(num);
-
-            if (num > 0 && num <= 100)
-            {
-                
-                MessageBox.Show(resultado);
-            }
-            else
-            {
-                MessageBox.Show("El número no es valido");
-            
-            }
+            mostrarTabla();
         }
 
-        
-
-        
-
-        
-
-        private void Formulario4_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void Formulario4_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

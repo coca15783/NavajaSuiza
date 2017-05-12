@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NavajaSuiza.Aplicacion_2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,40 +34,17 @@ namespace NavajaSuiza.Aplicación_2
         }
 
         ///<summary>
-        ///Funcion que calcula el factorial de un número.
+        ///Funcion que muestra el factorial de un número.
         ///</summary>
-        ///<return>
-        ///Devuelve un número que corresponde con el resultado.
-        ///</return>
-        ///<param name="num">
-        ///Ruta del número a leer.
-        ///</param>
-
-        int factorial (int num)
+        
+        private void mostrarFactorial()
         {
-            int fac;
-            int i;
+            tFactorial Factorial = new tFactorial();
 
-            fac = 1;
-           
-            for (i = num; i > 0; i--)
-            {
-               fac = fac * i;
-            }
+            int numero;
 
-            return fac;
-        }
-        /// <summary>
-        /// Boton que ejecuta la función factorial y muestra su resultado.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        /// 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            int num; 
-            int fact;
+            numero = Factorial.Numero;
+            
 
             //Prueba Caja Blanca
 
@@ -78,13 +56,12 @@ namespace NavajaSuiza.Aplicación_2
             {
                 try
                 {
-                    
-                    num = int.Parse(textBox1.Text);
-                    fact = factorial(num);
 
-                    if (num >= 0)
+                    Factorial.Numero = int.Parse(textBox1.Text);
+
+                    if (numero >= 0)
                     {
-                        MessageBox.Show(fact.ToString());
+                        MessageBox.Show(Factorial.mostrarDatos());
                     }
                     else
                     {
@@ -96,36 +73,20 @@ namespace NavajaSuiza.Aplicación_2
                     MessageBox.Show("Has instroducido un carácter");
                 }
             }
+        }
+        /// <summary>
+        /// Boton que ejecuta la función factorial y muestra su resultado.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            mostrarFactorial();
             
-
         }
 
-        
-
-        /*
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // Formulario2
-            // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "Formulario2";
-            this.Load += new System.EventHandler(this.Formulario2_Load);
-            this.ResumeLayout(false);
-
-        }
-        */
-
-        private void Formulario2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
-        private void Formulario2_Load_1(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
