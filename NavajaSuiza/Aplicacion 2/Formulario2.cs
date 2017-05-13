@@ -14,20 +14,20 @@ using System.Windows.Forms;
 namespace NavajaSuiza.Aplicación_2
 {
     /// <summary>
-    /// Clase principal de la aplicación 2.
+    /// Clase principal del formulario de la aplicación 2.
     /// </summary>
     /// <remarks>
     /// Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
     /// </remarks>
     /// <param name="sender"></param>
     /// <param name="e"></param>
-    
+
     public partial class Formulario2 : Form
     {
         /// <summary>
         /// Constructor de la clase Formulario2.
         /// </summary>
-        
+
         public Formulario2()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace NavajaSuiza.Aplicación_2
         ///<summary>
         ///Funcion que muestra el factorial de un número.
         ///</summary>
-        
+
         private void mostrarFactorial()
         {
             tFactorial Factorial = new tFactorial();
@@ -44,7 +44,7 @@ namespace NavajaSuiza.Aplicación_2
             int numero;
 
             numero = Factorial.Numero;
-            
+
 
             //Prueba Caja Blanca
 
@@ -84,9 +84,9 @@ namespace NavajaSuiza.Aplicación_2
         {
 
             mostrarFactorial();
-            
+
         }
 
-       
+
     }
 }

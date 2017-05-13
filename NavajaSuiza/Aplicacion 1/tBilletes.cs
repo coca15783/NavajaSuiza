@@ -6,13 +6,32 @@ using System.Threading.Tasks;
 
 namespace NavajaSuiza.Aplicacion_1
 {
+    /// <summary>
+    /// Proporciona las propiedades y métodos necesarios para devolver la cantidad de billetes.
+    /// <remarks>Recuerde utilizar esta clase cuando necesite modificar toda la información referente a Billetes</remarks>
+    /// </summary>
     class tDinero
     {
         private int mDinero;
 
+        /// <summary>
+        /// Constructor de la clase tDinero.
+        /// </summary>
         public tDinero()
         {
             mDinero = 0;
+        }
+
+        /// <summary>
+        /// Propiedad de la clase tDinero que obtiene el dinero.
+        /// <value>
+        /// Dinero introducido.
+        /// </value>
+        /// </summary>
+        public int Dinero
+        {
+            get { return mDinero; }
+            set { mDinero = value; }
         }
         ///<summary>
         ///Introduciremos una cantidad de dinero en metálico y nos mostrará la cantidad de billetes que le corresponda.
@@ -39,36 +58,51 @@ namespace NavajaSuiza.Aplicacion_1
         ///         </item>
         ///        </list>
         /// </para>
-        
-        public int Dinero
-        {
-            get { return mDinero; }
-            set { mDinero = value; }
-        }
+
+        ///<summary>
+        ///Funcion que devuelve la cantidad de billetes de 10000 pesetas.
+        ///<returns>
+        ///Devuelve el numero de billetes.
+        ///</returns>
+        ///</summary>
         private int billetes10000()
         {
 
             int billete10000;
 
             billete10000 = mDinero / 10000;
-           
+
             mDinero = mDinero % 10000;
-            
+
 
             return billete10000;
         }
+
+        ///<summary>
+        ///Funcion que devuelve la cantidad de billetes de 5000 pesetas.
+        ///<returns>
+        ///Devuelve el numero de billetes.
+        ///</returns>
+        ///</summary>
         private int billetes5000()
         {
 
             int billete5000;
 
             billete5000 = mDinero / 5000;
-            
+
             mDinero = mDinero % 5000;
-            
+
 
             return billete5000;
         }
+
+        ///<summary>
+        ///Funcion que devuelve la cantidad de billetes de 2000 pesetas.
+        ///<returns>
+        ///Devuelve el numero de billetes.
+        ///</returns>
+        ///</summary>
         private int billetes2000()
         {
 
@@ -80,6 +114,12 @@ namespace NavajaSuiza.Aplicacion_1
             return billete2000;
         }
 
+        ///<summary>
+        ///Funcion que devuelve la cantidad de billetes de 100 pesetas.
+        ///<returns>
+        ///Devuelve el numero de billetes.
+        ///</returns>
+        ///</summary>
         private int billetes100()
         {
 
@@ -90,6 +130,13 @@ namespace NavajaSuiza.Aplicacion_1
 
             return billete100;
         }
+
+        ///<summary>
+        ///Funcion que devuelve la cantidad de billetes de 25 pesetas.
+        ///<returns>
+        ///Devuelve el numero de billetes.
+        ///</returns>
+        ///</summary>
         private int billetes25()
         {
 
@@ -100,6 +147,13 @@ namespace NavajaSuiza.Aplicacion_1
 
             return billete25;
         }
+
+        ///<summary>
+        ///Funcion que mustra los datos devueltos por el resto de funciones de la clase.
+        ///<returns>
+        ///Devuelve un texto.
+        ///</returns>
+        ///</summary>
         public string mostrarDatos()
         {
             string texto;
@@ -120,7 +174,7 @@ namespace NavajaSuiza.Aplicacion_1
 
 
 
-         
-        
+
+
     }
 }

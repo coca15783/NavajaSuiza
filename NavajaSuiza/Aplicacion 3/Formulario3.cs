@@ -14,29 +14,32 @@ using System.Windows.Forms;
 namespace NavajaSuiza.Aplicación_3
 {
     /// <summary>
-    /// Clase principal de la aplicación 3.
+    /// Clase principal del formulario la aplicación 3.
     /// </summary>
     /// <remarks>
     /// Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
     /// </remarks>
     /// <param name="sender"></param>
     /// <param name="e"></param>
-    
+
     public partial class Formulario3 : Form
     {
         /// <summary>
         /// Constructor de la clase Formulario3.
         /// </summary>
-        
+
         public Formulario3()
         {
             InitializeComponent();
         }
 
+        ///<summary>
+        ///Funcion que muestra la potencia de un número.
+        ///</summary>
         private void mostrarPotencia()
         {
             tPotencia Potencia = new tPotencia();
-      
+
             Potencia.Base = int.Parse(textBox1.Text);
             Potencia.Exponente = int.Parse(textBox2.Text);
 
@@ -48,7 +51,7 @@ namespace NavajaSuiza.Aplicación_3
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
 

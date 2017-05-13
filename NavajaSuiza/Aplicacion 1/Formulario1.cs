@@ -14,7 +14,7 @@ using System.Windows.Forms;
 namespace NavajaSuiza.Aplicación_1
 {
     /// <summary>
-    /// Clase principal de la aplicación 1.
+    /// Clase principal del formulario de la aplicación 1.
     /// </summary>
     /// <remarks>
     /// Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
@@ -33,35 +33,9 @@ namespace NavajaSuiza.Aplicación_1
             InitializeComponent();
         }
 
-        ///<summary>
-        ///Introduciremos una cantidad de dinero en metálico y nos mostrará la cantidad de billetes que le corresponda.
-        ///</summary>
-        ///<remarks>
-        ///Cuando la cantidad de billetes sea igual a 0 no deberá aparecer nada.
-        ///</remarks>
-        /// <para> Tipos de Billetes
-        ///     <list type="bullet">
-        ///         <item>
-        ///             <description>10000</description>
-        ///         </item>
-        ///         <item>
-        ///             <description>5000</description>
-        ///         </item>
-        ///         <item>
-        ///             <description>2000</description>
-        ///         </item>
-        ///         <item>
-        ///             <description>100</description>
-        ///         </item>
-        ///         <item>
-        ///             <description>25</description>
-        ///         </item>
-        ///        </list>
-        /// </para>
-        ///<param name="din">
-        ///Ruta del dinero a leer.
-        ///</param>
-        
+        /// <summary>
+        /// Función encargada de mostrar los billetes.
+        /// </summary>
         private void mostrarBilletes()
         {
             tDinero Dinero = new tDinero();
@@ -91,16 +65,16 @@ namespace NavajaSuiza.Aplicación_1
         }
 
         /// <summary>
-        /// Boton que ejecuta la función cantbilletes
+        /// Boton que ejecuta la función mostrarBilletes
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
 
             mostrarBilletes();
-              
+
         }
 
         private void Formulario1_Load(object sender, EventArgs e)
@@ -114,7 +88,7 @@ namespace NavajaSuiza.Aplicación_1
             label6.Text = "";
         }
 
-       
+
 
         private void Formulario1_Load_1(object sender, EventArgs e)
         {

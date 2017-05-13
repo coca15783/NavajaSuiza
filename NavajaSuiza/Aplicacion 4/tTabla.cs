@@ -6,15 +6,28 @@ using System.Threading.Tasks;
 
 namespace NavajaSuiza.Aplicacion_4
 {
+    /// <summary>
+    /// Proporciona las propiedades y métodos necesarios para devolver la tabla de multiplicar de un número.
+    /// <remarks>Recuerde utilizar esta clase cuando necesite modificar toda la información referente a Tabla</remarks>
+    /// </summary>
     class tTabla
     {
         private int mNumero;
 
+        /// <summary>
+        /// Constructor de la clase tTabla.
+        /// </summary>
         public tTabla()
         {
             mNumero = 0;
         }
 
+        /// <summary>
+        /// Propiedad de la clase tTabla que obtiene el numero.
+        /// <value>
+        /// Numero introducido.
+        /// </value>
+        /// </summary>
         public int Numero
         {
             get { return mNumero; }
@@ -27,9 +40,6 @@ namespace NavajaSuiza.Aplicacion_4
         ///<return>
         ///Devuelve un texto que corresponde con el resultado.
         ///</return>
-        ///<param name="num">
-        ///Ruta del número a leer.
-        ///</param>
 
         private string tabla()
         {
@@ -48,6 +58,12 @@ namespace NavajaSuiza.Aplicacion_4
             return texto;
         }
 
+        ///<summary>
+        ///Funcion que mustra los datos devueltos por el resto de funciones de la clase.
+        ///<returns>
+        ///Devuelve un texto.
+        ///</returns>
+        ///</summary>
         public string mostrarDatos()
         {
             string texto;

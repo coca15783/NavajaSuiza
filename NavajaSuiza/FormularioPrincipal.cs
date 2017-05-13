@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace NavajaSuiza
 {
+    /// <summary>
+    /// Formulario Principal que establece la conexion con el resto de formularios.
+    /// </summary>
     public partial class FormularioPrincipal : Form
     {
         public FormularioPrincipal()
