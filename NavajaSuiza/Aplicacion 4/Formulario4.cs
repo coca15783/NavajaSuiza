@@ -9,9 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//Namespace aplicación 4
-
-namespace NavajaSuiza.Aplicación_4
+namespace NavajaSuiza.Aplicación_4  //Namespace aplicación 4
 {
     /// <summary>
     /// Clase principal del formulario de la aplicación 4.
@@ -38,16 +36,16 @@ namespace NavajaSuiza.Aplicación_4
         ///</summary>
         private void mostrarTabla()
         {
-            tTabla Tabla = new tTabla();
+            int numero;
+            string tabla;
 
+            numero = int.Parse(textBox1.Text);
+            tabla = tTablaLogica.tabla(numero);
 
-            Tabla.Numero = int.Parse(textBox1.Text);
-
-
-            if (Tabla.Numero > 0 && Tabla.Numero <= 100)
+            if (numero > 0 && numero <= 100)
             {
 
-                MessageBox.Show(Tabla.mostrarDatos());
+                MessageBox.Show(tabla);
             }
             else
             {
@@ -70,5 +68,9 @@ namespace NavajaSuiza.Aplicación_4
             mostrarTabla();
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.MaxLength = 20;    //He limitado la longitud del textBox a 50 carácteres.
+        }
     }
 }

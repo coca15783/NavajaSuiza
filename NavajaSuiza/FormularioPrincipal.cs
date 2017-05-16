@@ -43,7 +43,7 @@ namespace NavajaSuiza
         private void button1_Click(object sender, EventArgs e)
         {
             Aplicación_1.Formulario1 oFormulario = new Aplicación_1.Formulario1();
-            oFormulario.ShowDialog();
+            oFormulario.ShowDialog();    
         }
 
         /// <summary>

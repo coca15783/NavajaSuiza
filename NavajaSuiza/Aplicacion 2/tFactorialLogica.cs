@@ -10,14 +10,14 @@ namespace NavajaSuiza.Aplicacion_2
     /// Proporciona las propiedades y métodos necesarios para devolver el factorial de un número.
     /// <remarks>Recuerde utilizar esta clase cuando necesite modificar toda la información referente a Factorial</remarks>
     /// </summary>
-    class tFactorial
+    class tFactorialLogica
     {
         private int mNumero;
 
         /// <summary>
         /// Constructor de la clase tFactorial.
         /// </summary>
-        public tFactorial()
+        public tFactorialLogica()
         {
             mNumero = 0;
         }

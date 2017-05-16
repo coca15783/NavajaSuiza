@@ -9,9 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//Namespace aplicación 2
-
-namespace NavajaSuiza.Aplicación_2
+namespace NavajaSuiza.Aplicación_2  //Namespace aplicación 2
 {
     /// <summary>
     /// Clase principal del formulario de la aplicación 2.
@@ -39,12 +37,12 @@ namespace NavajaSuiza.Aplicación_2
 
         private void mostrarFactorial()
         {
-            tFactorial Factorial = new tFactorial();
+            tFactorialLogica Factorial = new tFactorialLogica();
 
             int numero;
 
             numero = Factorial.Numero;
-
+            textBox1.MaxLength = 50;    //He limitado la longitud del textBox a 50 carácteres.
 
             //Prueba Caja Blanca
 
@@ -87,6 +85,9 @@ namespace NavajaSuiza.Aplicación_2
 
         }
 
-
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
+        }
     }
 }

@@ -9,9 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//Namespace aplicación 3
-
-namespace NavajaSuiza.Aplicación_3
+namespace NavajaSuiza.Aplicación_3  //Namespace aplicación 3
 {
     /// <summary>
     /// Clase principal del formulario la aplicación 3.
@@ -38,12 +36,17 @@ namespace NavajaSuiza.Aplicación_3
         ///</summary>
         private void mostrarPotencia()
         {
-            tPotencia Potencia = new tPotencia();
+            int basE;
+            int exponente;
+            int potencia;
 
-            Potencia.Base = int.Parse(textBox1.Text);
-            Potencia.Exponente = int.Parse(textBox2.Text);
+            basE = int.Parse(textBox1.Text);
+            exponente = int.Parse(textBox2.Text);
 
-            MessageBox.Show(Potencia.mostrarDatos());
+            potencia = tPotenciaLogica.potencia(basE, exponente);
+
+            MessageBox.Show(potencia.ToString());
+
         }
 
         /// <summary>
@@ -58,5 +61,14 @@ namespace NavajaSuiza.Aplicación_3
             mostrarPotencia();
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
+        }
     }
 }

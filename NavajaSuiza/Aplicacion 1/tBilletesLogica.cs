@@ -10,14 +10,14 @@ namespace NavajaSuiza.Aplicacion_1
     /// Proporciona las propiedades y métodos necesarios para devolver la cantidad de billetes.
     /// <remarks>Recuerde utilizar esta clase cuando necesite modificar toda la información referente a Billetes</remarks>
     /// </summary>
-    class tDinero
+    class tBilletesLogica
     {
         private int mDinero;
 
         /// <summary>
         /// Constructor de la clase tDinero.
         /// </summary>
-        public tDinero()
+        public tBilletesLogica()
         {
             mDinero = 0;
         }

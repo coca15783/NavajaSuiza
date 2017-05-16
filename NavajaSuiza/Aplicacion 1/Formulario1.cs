@@ -9,9 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//Namespace aplicación 1
 
-namespace NavajaSuiza.Aplicación_1
+namespace NavajaSuiza.Aplicación_1  //Namespace aplicación 1
 {
     /// <summary>
     /// Clase principal del formulario de la aplicación 1.
@@ -24,6 +23,7 @@ namespace NavajaSuiza.Aplicación_1
 
     public partial class Formulario1 : Form
     {
+
         /// <summary>
         /// Constructor de la clase Formulario1.
         /// </summary>
@@ -34,34 +34,86 @@ namespace NavajaSuiza.Aplicación_1
         }
 
         /// <summary>
+        /// Función .
+        /// </summary>
+        private bool limitartextBox()
+        {
+            bool resultado;
+
+            if (textBox1.MaxLength >= 20)
+            {
+                resultado = true;
+            }
+            else
+            {
+                resultado = false;
+            }
+
+            return resultado;
+        }
+
+        /// <summary>
         /// Función encargada de mostrar los billetes.
         /// </summary>
         private void mostrarBilletes()
         {
-            tDinero Dinero = new tDinero();
+            tBilletesLogica Dinero = new tBilletesLogica();
 
             int dinero;
+            int x;
+            string mensaje;
+            bool textLimitado;
 
+            mensaje = "";
             dinero = Dinero.Dinero;
+            textLimitado = limitartextBox();
 
             // Prueba Caja Blanca
 
-            if (textBox1.Text == "")
+            try
             {
-                MessageBox.Show("Introduce un número de pesetas en metalico");
+                if (textLimitado == true)
+                {
+                    if (String.IsNullOrWhiteSpace((textBox1.Text)))
+                    {
+                        mensaje = "Introduce un número de pesetas en metalico";
+                    }
+                    else
+                    {
+
+                        bool resultado = Int32.TryParse(textBox1.Text, out dinero);
+
+                        if (resultado)
+                        {
+                            mensaje = Dinero.mostrarDatos();
+                        }
+                        else
+                        {
+                            mensaje = "Has introducido un carácter";
+                        }
+
+                        /*
+                        Dinero.Dinero = int.Parse(textBox1.Text);
+                        MessageBox.Show(Dinero.mostrarDatos());
+                        MessageBox.Show("Has instroducido un carácter");
+                        */
+
+                    }
+
+                }
+                else
+                {
+                    mensaje = "No puedes introducir mas de 20 carácteres";
+                }
+
+                MessageBox.Show(mensaje);
             }
-            else
+
+            catch (Exception ex)
             {
-                try
-                {
-                    Dinero.Dinero = int.Parse(textBox1.Text);
-                    MessageBox.Show(Dinero.mostrarDatos());
-                }
-                catch
-                {
-                    MessageBox.Show("Has instroducido un carácter");
-                }
+                MessageBox.Show("Se ha producido un error:" + ex.Message);
             }
+
         }
 
         /// <summary>
@@ -77,22 +129,9 @@ namespace NavajaSuiza.Aplicación_1
 
         }
 
-        private void Formulario1_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // Lo hago aqui ya que no he podido acceder a las propiedades de los label porque no me aparecen los label en el formulario.
-
-            label2.Text = "";
-            label3.Text = "";
-            label4.Text = "";
-            label5.Text = "";
-            label6.Text = "";
-        }
-
-
-
-        private void Formulario1_Load_1(object sender, EventArgs e)
-        {
-
+            textBox1.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
         }
     }
 }
