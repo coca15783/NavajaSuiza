@@ -33,25 +33,7 @@ namespace NavajaSuiza.Aplicación_1  //Namespace aplicación 1
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Función .
-        /// </summary>
-        private bool limitartextBox()
-        {
-            bool resultado;
-
-            if (textBox1.MaxLength >= 20)
-            {
-                resultado = true;
-            }
-            else
-            {
-                resultado = false;
-            }
-
-            return resultado;
-        }
-
+        
         /// <summary>
         /// Función encargada de mostrar los billetes.
         /// </summary>
@@ -60,55 +42,39 @@ namespace NavajaSuiza.Aplicación_1  //Namespace aplicación 1
             tBilletesLogica Dinero = new tBilletesLogica();
 
             int dinero;
-            int x;
             string mensaje;
-            bool textLimitado;
+
+            bool resultado = Int32.TryParse(tDinero.Text, out dinero);
 
             mensaje = "";
-            dinero = Dinero.Dinero;
-            textLimitado = limitartextBox();
+            Dinero.Dinero = dinero;
 
             // Prueba Caja Blanca
 
             try
             {
-                if (textLimitado == true)
+                if (String.IsNullOrWhiteSpace((tDinero.Text)))
                 {
-                    if (String.IsNullOrWhiteSpace((textBox1.Text)))
-                    {
-                        mensaje = "Introduce un número de pesetas en metalico";
-                    }
-                    else
-                    {
-
-                        bool resultado = Int32.TryParse(textBox1.Text, out dinero);
-
-                        if (resultado)
-                        {
-                            mensaje = Dinero.mostrarDatos();
-                        }
-                        else
-                        {
-                            mensaje = "Has introducido un carácter";
-                        }
-
-                        /*
-                        Dinero.Dinero = int.Parse(textBox1.Text);
-                        MessageBox.Show(Dinero.mostrarDatos());
-                        MessageBox.Show("Has instroducido un carácter");
-                        */
-
-                    }
-
+                    mensaje = "Introduce un número de pesetas en metalico";
                 }
                 else
                 {
-                    mensaje = "No puedes introducir mas de 20 carácteres";
+                    if (resultado)
+                    {
+                        mensaje = Dinero.mostrarDatos();
+                    }
+                    else
+                    {
+                        mensaje = "Has introducido un carácter";
+                    }
                 }
 
                 MessageBox.Show(mensaje);
             }
-
+            catch (FormatException ex)
+            {
+                MessageBox.Show("El formato no es el correcto:" + ex.Message);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Se ha producido un error:" + ex.Message);
@@ -122,7 +88,7 @@ namespace NavajaSuiza.Aplicación_1  //Namespace aplicación 1
         /// <param name="sender"></param>
         /// <param name="e"></param>
 
-        private void button1_Click(object sender, EventArgs e)
+        private void mostrarBilletes(object sender, EventArgs e)
         {
 
             mostrarBilletes();
@@ -131,7 +97,7 @@ namespace NavajaSuiza.Aplicación_1  //Namespace aplicación 1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
+            tDinero.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
         }
     }
 }

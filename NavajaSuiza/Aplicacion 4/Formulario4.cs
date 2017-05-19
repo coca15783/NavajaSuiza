@@ -30,7 +30,17 @@ namespace NavajaSuiza.Aplicación_4  //Namespace aplicación 4
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Función que lanza una excepción si el número es menor que 0 y mayor que 100.
+        /// </summary>
+        /// <param name="numero"></param>
+        static public void rango(int numero)
+        {
+            if (numero < 0 || numero > 100)
+            {
+                throw new excepcionRango("Número fuera de rango.");
+            }
+        }
         ///<summary>
         ///Funcion que muestra la tabla de multiplicar de un número.
         ///</summary>
@@ -38,19 +48,44 @@ namespace NavajaSuiza.Aplicación_4  //Namespace aplicación 4
         {
             int numero;
             string tabla;
+            string mensaje;
 
-            numero = int.Parse(textBox1.Text);
+            bool resultado = Int32.TryParse(tNumero.Text, out numero);
+
             tabla = tTablaLogica.tabla(numero);
 
-            if (numero > 0 && numero <= 100)
+            try
             {
-
-                MessageBox.Show(tabla);
+                rango(numero);
+                if (String.IsNullOrWhiteSpace((tNumero.Text)))
+                {
+                    mensaje = "Introduce un número.";
+                }
+                else
+                {
+                        if (resultado)
+                        {
+                            mensaje = tabla;
+                        }
+                        else
+                        {
+                            mensaje = "Has introducido un carácter";
+                        }
+                 }
+  
+                MessageBox.Show(mensaje);
             }
-            else
+            catch (excepcionRango ex)
             {
-                MessageBox.Show("El número no es valido");
-
+                MessageBox.Show("Número fuera de rango. " + ex.Message);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("El formato no es el correcto:" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se ha producido un error:" + ex.Message);
             }
         }
 
@@ -63,14 +98,14 @@ namespace NavajaSuiza.Aplicación_4  //Namespace aplicación 4
         /// <param name="sender"></param>
         /// <param name="e"></param>
 
-        private void button1_Click(object sender, EventArgs e)
+        private void mostrarTabla(object sender, EventArgs e)
         {
             mostrarTabla();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.MaxLength = 20;    //He limitado la longitud del textBox a 50 carácteres.
+            tNumero.MaxLength = 20;    //He limitado la longitud del textBox a 50 carácteres.
         }
     }
 }

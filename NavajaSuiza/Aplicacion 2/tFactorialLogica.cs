@@ -10,9 +10,9 @@ namespace NavajaSuiza.Aplicacion_2
     /// Proporciona las propiedades y métodos necesarios para devolver el factorial de un número.
     /// <remarks>Recuerde utilizar esta clase cuando necesite modificar toda la información referente a Factorial</remarks>
     /// </summary>
-    class tFactorialLogica
+    public class tFactorialLogica
     {
-        private int mNumero;
+        private long mNumero;
 
         /// <summary>
         /// Constructor de la clase tFactorial.
@@ -28,7 +28,7 @@ namespace NavajaSuiza.Aplicacion_2
         /// Numero introducido.
         /// </value>
         /// </summary>
-        public int Numero
+        public long Numero
         {
             get { return mNumero; }
             set { mNumero = value; }
@@ -41,11 +41,11 @@ namespace NavajaSuiza.Aplicacion_2
         ///Devuelve un número que corresponde con el resultado.
         ///</return>
 
-        private int factorial()
+        public long factorial()
         {
 
-            int fac;
-            int i;
+            long fac;
+            long i;
 
             fac = 1;
 
@@ -56,22 +56,6 @@ namespace NavajaSuiza.Aplicacion_2
 
             return fac;
 
-        }
-
-        ///<summary>
-        ///Funcion que mustra los datos devueltos por el resto de funciones de la clase.
-        ///<returns>
-        ///Devuelve un texto.
-        ///</returns>
-        ///</summary>
-        public string mostrarDatos()
-        {
-            string texto;
-
-            texto = "";
-            texto = texto + factorial();
-
-            return texto;
         }
     }
 }

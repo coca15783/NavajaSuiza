@@ -1,0 +1,428 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NavajaSuiza</name>
+    </assembly>
+    <members>
+        <member name="T:NavajaSuiza.Aplicación_1.Formulario1">
+            <summary>
+            Clase principal del formulario de la aplicación 1.
+            </summary>
+            <remarks>
+            Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
+            </remarks>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_1.Formulario1.#ctor">
+            <summary>
+            Constructor de la clase Formulario1.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_1.Formulario1.mostrarBilletes">
+            <summary>
+            Función encargada de mostrar los billetes.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_1.Formulario1.mostrarBilletes(System.Object,System.EventArgs)">
+            <summary>
+            Boton que ejecuta la función mostrarBilletes
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:NavajaSuiza.Aplicación_1.Formulario1.components">
+            <summary>
+            Variable del diseñador necesaria.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_1.Formulario1.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén usando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_1.Formulario1.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido de este método con el editor de código.
+            </summary>
+        </member>
+        <member name="T:NavajaSuiza.Aplicacion_1.tBilletesLogica">
+            <summary>
+            Proporciona las propiedades y métodos necesarios para devolver la cantidad de billetes.
+            <remarks>Recuerde utilizar esta clase cuando necesite modificar toda la información referente a Billetes</remarks>
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicacion_1.tBilletesLogica.#ctor">
+            <summary>
+            Constructor de la clase tDinero.
+            </summary>
+        </member>
+        <member name="P:NavajaSuiza.Aplicacion_1.tBilletesLogica.Dinero">
+            <summary>
+            Propiedad de la clase tDinero que obtiene el dinero.
+            <value>
+            Dinero introducido.
+            </value>
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicacion_1.tBilletesLogica.billetes10000">
+            <summary>
+            Introduciremos una cantidad de dinero en metálico y nos mostrará la cantidad de billetes que le corresponda.
+            </summary>
+            <remarks>
+            Cuando la cantidad de billetes sea igual a 0 no deberá aparecer nada.
+            </remarks>
+             <para> Tipos de Billetes
+                 <list type="bullet">
+                     <item>
+                         <description>10000</description>
+                     </item>
+                     <item>
+                         <description>5000</description>
+                     </item>
+                     <item>
+                         <description>2000</description>
+                     </item>
+                     <item>
+                         <description>100</description>
+                     </item>
+                     <item>
+                         <description>25</description>
+                     </item>
+                    </list>
+             </para>
+            <summary>
+            Funcion que devuelve la cantidad de billetes de 10000 pesetas.
+            <returns>
+            Devuelve el numero de billetes.
+            </returns>
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicacion_1.tBilletesLogica.billetes5000">
+            <summary>
+            Funcion que devuelve la cantidad de billetes de 5000 pesetas.
+            <returns>
+            Devuelve el numero de billetes.
+            </returns>
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicacion_1.tBilletesLogica.billetes2000">
+            <summary>
+            Funcion que devuelve la cantidad de billetes de 2000 pesetas.
+            <returns>
+            Devuelve el numero de billetes.
+            </returns>
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicacion_1.tBilletesLogica.billetes100">
+            <summary>
+            Funcion que devuelve la cantidad de billetes de 100 pesetas.
+            <returns>
+            Devuelve el numero de billetes.
+            </returns>
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicacion_1.tBilletesLogica.billetes25">
+            <summary>
+            Funcion que devuelve la cantidad de billetes de 25 pesetas.
+            <returns>
+            Devuelve el numero de billetes.
+            </returns>
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicacion_1.tBilletesLogica.mostrarDatos">
+            <summary>
+            Funcion que mustra los datos devueltos por el resto de funciones de la clase.
+            <returns>
+            Devuelve un texto.
+            </returns>
+            </summary>
+        </member>
+        <member name="T:NavajaSuiza.Aplicacion_2.excepcionRango">
+            <summary>
+            Clase de excepción personalizada.
+            </summary>
+        </member>
+        <member name="T:NavajaSuiza.Aplicacion_2.tFactorialLogica">
+            <summary>
+            Proporciona las propiedades y métodos necesarios para devolver el factorial de un número.
+            <remarks>Recuerde utilizar esta clase cuando necesite modificar toda la información referente a Factorial</remarks>
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicacion_2.tFactorialLogica.#ctor">
+            <summary>
+            Constructor de la clase tFactorial.
+            </summary>
+        </member>
+        <member name="P:NavajaSuiza.Aplicacion_2.tFactorialLogica.Numero">
+            <summary>
+            Propiedad de la clase tFactorial que obtiene el numero.
+            <value>
+            Numero introducido.
+            </value>
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicacion_2.tFactorialLogica.factorial">
+            <summary>
+            Funcion que calcula el factorial de un número.
+            </summary>
+            <return>
+            Devuelve un número que corresponde con el resultado.
+            </return>
+        </member>
+        <member name="T:NavajaSuiza.Aplicación_2.Formulario2">
+            <summary>
+            Clase principal del formulario de la aplicación 2.
+            </summary>
+            <remarks>
+            Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
+            </remarks>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_2.Formulario2.#ctor">
+            <summary>
+            Constructor de la clase Formulario2.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_2.Formulario2.rango(System.Int64)">
+            <summary>
+            Función que lanza una excepción si el número es mayor que 15.
+            </summary>
+            <param name="numero"></param>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_2.Formulario2.mostrarFactorial">
+            <summary>
+            Funcion que muestra el factorial de un número.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_2.Formulario2.mostrarFactorial(System.Object,System.EventArgs)">
+            <summary>
+            Boton que ejecuta la función factorial y muestra su resultado.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            
+        </member>
+        <member name="F:NavajaSuiza.Aplicación_2.Formulario2.components">
+            <summary>
+            Variable del diseñador necesaria.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_2.Formulario2.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén usando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_2.Formulario2.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido de este método con el editor de código.
+            </summary>
+        </member>
+        <member name="T:NavajaSuiza.Aplicación_3.Formulario3">
+            <summary>
+            Clase principal del formulario la aplicación 3.
+            </summary>
+            <remarks>
+            Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
+            </remarks>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_3.Formulario3.#ctor">
+            <summary>
+            Constructor de la clase Formulario3.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_3.Formulario3.mostrarPotencia">
+            <summary>
+            Funcion que muestra la potencia de un número.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_3.Formulario3.mostrarPotencia(System.Object,System.EventArgs)">
+            <summary>
+            Boton que ejecuta la función potencia y muestra su resultado.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:NavajaSuiza.Aplicación_3.Formulario3.components">
+            <summary>
+            Variable del diseñador necesaria.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_3.Formulario3.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén usando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_3.Formulario3.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido de este método con el editor de código.
+            </summary>
+        </member>
+        <member name="T:NavajaSuiza.Aplicacion_3.tPotenciaLogica">
+            <summary>
+            Proporciona las propiedades y métodos necesarios para devolver la potencia de un número.
+            <remarks>Recuerde utilizar esta clase cuando necesite modificar toda la información referente a Potencia</remarks>
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicacion_3.tPotenciaLogica.potencia(System.Int32,System.Int32)">
+            <summary>
+            Funcion que calcula la potencia de un número.
+            </summary>
+            <return>
+            Devuelve un número que corresponde con el resultado.
+            </return>
+        </member>
+        <member name="T:NavajaSuiza.Aplicacion_4.excepcionRango">
+            <summary>
+            Clase de excepción personalizada.
+            </summary>
+        </member>
+        <member name="T:NavajaSuiza.Aplicacion_4.tTablaLogica">
+            <summary>
+            Proporciona las propiedades y métodos necesarios para devolver la tabla de multiplicar de un número.
+            <remarks>Recuerde utilizar esta clase cuando necesite modificar toda la información referente a Tabla</remarks>
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicacion_4.tTablaLogica.tabla(System.Int32)">
+            <summary>
+            Funcion que calcula la tabla de multiplicar de un número.
+            </summary>
+            <return>
+            Devuelve un texto que corresponde con el resultado.
+            </return>
+        </member>
+        <member name="T:NavajaSuiza.Aplicación_4.Formulario4">
+            <summary>
+            Clase principal del formulario de la aplicación 4.
+            </summary>
+            <remarks>
+            Lee archivos de configuración y crea los hilos que ejecutan el resto del programa.
+            </remarks>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_4.Formulario4.#ctor">
+            <summary>
+            Constructor de la clase Formulario 4.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_4.Formulario4.rango(System.Int32)">
+            <summary>
+            Función que lanza una excepción si el número es menor que 0 y mayor que 100.
+            </summary>
+            <param name="numero"></param>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_4.Formulario4.mostrarTabla">
+            <summary>
+            Funcion que muestra la tabla de multiplicar de un número.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_4.Formulario4.mostrarTabla(System.Object,System.EventArgs)">
+            <summary>
+            Boton que ejecuta la función tabla y muestra su resultado.
+            </summary>
+            <remarks>
+            El número introducido tiene que estar entre o y 100.
+            </remarks>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:NavajaSuiza.Aplicación_4.Formulario4.components">
+            <summary>
+            Variable del diseñador necesaria.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_4.Formulario4.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén usando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        </member>
+        <member name="M:NavajaSuiza.Aplicación_4.Formulario4.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido de este método con el editor de código.
+            </summary>
+        </member>
+        <member name="T:NavajaSuiza.FormularioPrincipal">
+            <summary>
+            Formulario Principal que establece la conexion con el resto de formularios.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.FormularioPrincipal.button2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Boton que llama a la aplicación 2
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NavajaSuiza.FormularioPrincipal.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Boton que llama a la aplicación 1
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NavajaSuiza.FormularioPrincipal.button3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Boton que llama a la aplicación 3
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:NavajaSuiza.FormularioPrincipal.button4_Click(System.Object,System.EventArgs)">
+            <summary>
+            Boton que llama a la aplicación 4
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:NavajaSuiza.FormularioPrincipal.components">
+            <summary>
+            Variable del diseñador necesaria.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.FormularioPrincipal.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén usando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        </member>
+        <member name="M:NavajaSuiza.FormularioPrincipal.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido de este método con el editor de código.
+            </summary>
+        </member>
+        <member name="M:NavajaSuiza.Program.Main">
+            <summary>
+            Punto de entrada principal para la aplicación.
+            </summary>
+        </member>
+        <member name="T:NavajaSuiza.Properties.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:NavajaSuiza.Properties.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:NavajaSuiza.Properties.Resources.Culture">
+            <summary>
+              Invalida la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos usando esta clase de recursos fuertemente tipados.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -12,7 +12,6 @@ namespace NavajaSuiza.Aplicacion_3
     /// </summary>
    public static class tPotenciaLogica
     {
-        
         ///<summary>
         ///Funcion que calcula la potencia de un número.
         ///</summary>

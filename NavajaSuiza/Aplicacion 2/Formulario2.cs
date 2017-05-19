@@ -30,7 +30,17 @@ namespace NavajaSuiza.Aplicación_2  //Namespace aplicación 2
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Función que lanza una excepción si el número es mayor que 15.
+        /// </summary>
+        /// <param name="numero"></param>
+        public void rango(long numero) 
+        {
+            if(numero>15)
+            {
+                throw new excepcionRango("Número fuera de rango.");
+            }
+        }
         ///<summary>
         ///Funcion que muestra el factorial de un número.
         ///</summary>
@@ -39,38 +49,58 @@ namespace NavajaSuiza.Aplicación_2  //Namespace aplicación 2
         {
             tFactorialLogica Factorial = new tFactorialLogica();
 
-            int numero;
+            long numero;
+            string mensaje;
+            long res;
 
-            numero = Factorial.Numero;
-            textBox1.MaxLength = 50;    //He limitado la longitud del textBox a 50 carácteres.
+            bool resultado = long.TryParse(tNumero.Text, out numero);
+            Factorial.Numero = numero;
+            res = Factorial.factorial();
+
 
             //Prueba Caja Blanca
+            try
+            {
+                rango(numero);
 
-            if (textBox1.Text == "")
-            {
-                MessageBox.Show("Introduce un número");
-            }
-            else
-            {
-                try
+                if (String.IsNullOrWhiteSpace((tNumero.Text)))
                 {
-
-                    Factorial.Numero = int.Parse(textBox1.Text);
+                    mensaje = "Introduce un número.";
+                }
+                else
+                {
 
                     if (numero >= 0)
                     {
-                        MessageBox.Show(Factorial.mostrarDatos());
+                        if (resultado)
+                        {
+                            mensaje = res.ToString();
+                        }
+                        else
+                        {
+                            mensaje = "Has introducido un carácter.";
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Introduce un número positivo");
+                       mensaje = "Introduce un número positivo.";
                     }
                 }
-                catch
-                {
-                    MessageBox.Show("Has instroducido un carácter");
-                }
+                MessageBox.Show(mensaje);
             }
+            catch (excepcionRango ex)
+            {
+                MessageBox.Show("Número fuera de rango: " + ex.Message);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("El formato no es el correcto:" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se ha producido un error:" + ex.Message);
+            }
+        
         }
         /// <summary>
         /// Boton que ejecuta la función factorial y muestra su resultado.
@@ -78,7 +108,7 @@ namespace NavajaSuiza.Aplicación_2  //Namespace aplicación 2
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// 
-        private void button1_Click(object sender, EventArgs e)
+        private void mostrarFactorial(object sender, EventArgs e)
         {
 
             mostrarFactorial();
@@ -87,7 +117,7 @@ namespace NavajaSuiza.Aplicación_2  //Namespace aplicación 2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
+            tNumero.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
         }
     }
 }

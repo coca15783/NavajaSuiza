@@ -39,14 +39,53 @@ namespace NavajaSuiza.Aplicación_3  //Namespace aplicación 3
             int basE;
             int exponente;
             int potencia;
+            string mensaje;
 
-            basE = int.Parse(textBox1.Text);
-            exponente = int.Parse(textBox2.Text);
+            bool resultado1 = Int32.TryParse(tBase.Text, out basE);
+            bool resultado2 = Int32.TryParse(tPotencia.Text, out exponente);
 
             potencia = tPotenciaLogica.potencia(basE, exponente);
+            mensaje = "";
 
-            MessageBox.Show(potencia.ToString());
+            try
+            {
+                if (String.IsNullOrWhiteSpace((tBase.Text)) || String.IsNullOrWhiteSpace((tPotencia.Text)))
+                {
+                    mensaje = "Introduce un número.";
+                }
+                else
+                {
+                    if (resultado1 && resultado2)
+                    {
+                        mensaje = potencia.ToString();
+                    }
 
+                    if(resultado1 == false && resultado2 == false)
+                    {
+                        mensaje = "Has introducido un carácter";
+                    }
+
+                    if (resultado1 == true && resultado2 == false)
+                    {
+                        mensaje = "Has introducido un carácter";
+                    }
+
+                    if (resultado1 == false && resultado2 == true)
+                    {
+                        mensaje = "Has introducido un carácter";
+                    }
+
+                }
+                MessageBox.Show(mensaje);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("El formato no es el correcto:" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se ha producido un error:" + ex.Message);
+            }
         }
 
         /// <summary>
@@ -55,7 +94,7 @@ namespace NavajaSuiza.Aplicación_3  //Namespace aplicación 3
         /// <param name="sender"></param>
         /// <param name="e"></param>
 
-        private void button1_Click(object sender, EventArgs e)
+        private void mostrarPotencia(object sender, EventArgs e)
         {
 
             mostrarPotencia();
@@ -63,12 +102,12 @@ namespace NavajaSuiza.Aplicación_3  //Namespace aplicación 3
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
+            tBase.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            textBox1.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
+            tBase.MaxLength = 20;    //He limitado la longitud del textBox a 20 carácteres.
         }
     }
 }

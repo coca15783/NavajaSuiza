@@ -10,7 +10,7 @@ namespace NavajaSuiza.Aplicacion_1
     /// Proporciona las propiedades y métodos necesarios para devolver la cantidad de billetes.
     /// <remarks>Recuerde utilizar esta clase cuando necesite modificar toda la información referente a Billetes</remarks>
     /// </summary>
-    class tBilletesLogica
+    public class tBilletesLogica
     {
         private int mDinero;
 
@@ -65,7 +65,7 @@ namespace NavajaSuiza.Aplicacion_1
         ///Devuelve el numero de billetes.
         ///</returns>
         ///</summary>
-        private int billetes10000()
+        public int billetes10000()
         {
 
             int billete10000;
@@ -84,7 +84,7 @@ namespace NavajaSuiza.Aplicacion_1
         ///Devuelve el numero de billetes.
         ///</returns>
         ///</summary>
-        private int billetes5000()
+        public int billetes5000()
         {
 
             int billete5000;
@@ -103,7 +103,7 @@ namespace NavajaSuiza.Aplicacion_1
         ///Devuelve el numero de billetes.
         ///</returns>
         ///</summary>
-        private int billetes2000()
+        public int billetes2000()
         {
 
             int billete2000;
@@ -120,7 +120,7 @@ namespace NavajaSuiza.Aplicacion_1
         ///Devuelve el numero de billetes.
         ///</returns>
         ///</summary>
-        private int billetes100()
+        public int billetes100()
         {
 
             int billete100;
@@ -137,7 +137,7 @@ namespace NavajaSuiza.Aplicacion_1
         ///Devuelve el numero de billetes.
         ///</returns>
         ///</summary>
-        private int billetes25()
+        public int billetes25()
         {
 
             int billete25;
