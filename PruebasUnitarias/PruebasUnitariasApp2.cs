@@ -47,25 +47,7 @@ namespace PruebasUnitarias
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);
 
         }
-        [TestMethod]
-        public void PruebaApp2FactorialValorNegativo()
-        {
-            tFactorialLogica Factorial = new tFactorialLogica();
-
-            long numeroIntroducido;
-            numeroIntroducido = -1;
-            Factorial.Numero = numeroIntroducido;
-
-            long resultadoEsperado;
-            long resultadoObtenido;
-
-            resultadoObtenido = Factorial.factorial();
-
-            resultadoEsperado = 1;
-
-            Assert.AreEqual(resultadoEsperado, resultadoObtenido);
-
-        }
+        
         [TestMethod]
         public void PruebaApp2FactorialValorCeroUno()
         {
